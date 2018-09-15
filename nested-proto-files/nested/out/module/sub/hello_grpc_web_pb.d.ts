@@ -1,6 +1,6 @@
 import * as grpcWeb from 'grpc-web';
 import {
-  Empty} from './module/sub/hello_pb';
+  Empty} from './hello_pb';
 
 export class GreetingClient {
   constructor (hostname: string,
