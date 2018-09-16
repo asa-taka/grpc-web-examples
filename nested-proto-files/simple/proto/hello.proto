@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package hello;
+
 service Greeting {
   rpc Hello(Empty) returns (Empty) {}
 }
