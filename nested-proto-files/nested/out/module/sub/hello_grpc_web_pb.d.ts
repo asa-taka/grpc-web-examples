@@ -15,3 +15,4 @@ export class GreetingClient {
   ): grpcWeb.ClientReadableStream;
 
 }
+
