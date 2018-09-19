@@ -1,6 +1,6 @@
-# Compairing gRPC-Web Libraries
+# Comparing gRPC-Web Libraries
 
-Here compares several implementations of [gRPC-Web]
+Here compares several implementations of [gRPC-Web].
 
 - [improbable-eng/grpc-web]
 - [grpc/grpc-web]
