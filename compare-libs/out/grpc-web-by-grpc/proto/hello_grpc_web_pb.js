@@ -75,27 +75,27 @@ proto.hello.GreetingPromiseClient =
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.hello.Empty,
- *   !proto.hello.Empty>}
+ *   !proto.hello.HelloRequest,
+ *   !proto.hello.HelloResponse>}
  */
 const methodInfo_Hello = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.hello.Empty,
-  /** @param {!proto.hello.Empty} request */
+  proto.hello.HelloResponse,
+  /** @param {!proto.hello.HelloRequest} request */
   function(request) {
     return request.serializeBinary();
   },
-  proto.hello.Empty.deserializeBinary
+  proto.hello.HelloResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.hello.Empty} request The
+ * @param {!proto.hello.HelloRequest} request The
  *     request proto
  * @param {!Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.hello.Empty)}
+ * @param {function(?grpc.web.Error, ?proto.hello.HelloResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.hello.Empty>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.hello.HelloResponse>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.hello.GreetingClient.prototype.hello =
@@ -110,11 +110,11 @@ proto.hello.GreetingClient.prototype.hello =
 
 
 /**
- * @param {!proto.hello.Empty} request The
+ * @param {!proto.hello.HelloRequest} request The
  *     request proto
  * @param {!Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.hello.Empty>}
+ * @return {!Promise<!proto.hello.HelloResponse>}
  *     The XHR Node Readable Stream
  */
 proto.hello.GreetingPromiseClient.prototype.hello =

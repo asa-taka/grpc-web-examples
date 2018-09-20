@@ -15,8 +15,8 @@ Greeting.Hello = {
   service: Greeting,
   requestStream: false,
   responseStream: false,
-  requestType: proto_hello_pb.Empty,
-  responseType: proto_hello_pb.Empty
+  requestType: proto_hello_pb.HelloRequest,
+  responseType: proto_hello_pb.HelloResponse
 };
 
 exports.Greeting = Greeting;

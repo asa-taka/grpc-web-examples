@@ -1,6 +1,7 @@
 import * as grpcWeb from 'grpc-web';
 import {
-  Empty} from './hello_pb';
+  HelloRequest,
+  HelloResponse} from './hello_pb';
 
 export class GreetingClient {
   constructor (hostname: string,
@@ -8,10 +9,10 @@ export class GreetingClient {
                options: { [s: string]: {}; });
 
   hello(
-    request: Empty,
+    request: HelloRequest,
     metadata: grpcWeb.Metadata,
     callback: (err: grpcWeb.Error,
-               response: Empty) => void
+               response: HelloResponse) => void
   ): grpcWeb.ClientReadableStream;
 
 }

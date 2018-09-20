@@ -9,8 +9,8 @@ type GreetingHello = {
   readonly service: typeof Greeting;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof proto_hello_pb.Empty;
-  readonly responseType: typeof proto_hello_pb.Empty;
+  readonly requestType: typeof proto_hello_pb.HelloRequest;
+  readonly responseType: typeof proto_hello_pb.HelloResponse;
 };
 
 export class Greeting {
@@ -34,13 +34,13 @@ export class GreetingClient {
 
   constructor(serviceHost: string, options?: ServiceClientOptions);
   hello(
-    requestMessage: proto_hello_pb.Empty,
+    requestMessage: proto_hello_pb.HelloRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError, responseMessage: proto_hello_pb.Empty|null) => void
+    callback: (error: ServiceError, responseMessage: proto_hello_pb.HelloResponse|null) => void
   ): void;
   hello(
-    requestMessage: proto_hello_pb.Empty,
-    callback: (error: ServiceError, responseMessage: proto_hello_pb.Empty|null) => void
+    requestMessage: proto_hello_pb.HelloRequest,
+    callback: (error: ServiceError, responseMessage: proto_hello_pb.HelloResponse|null) => void
   ): void;
 }
 

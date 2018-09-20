@@ -3,7 +3,18 @@ syntax = "proto3";
 package hello;
 
 service Greeting {
-  rpc Hello(Empty) returns (Empty) {}
+  rpc Hello(HelloRequest) returns (HelloResponse) {}
 }
 
-message Empty {}
+message HelloRequest {
+  string message = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+  Profile profile = 2;
+}
+
+message Profile {
+  string name = 1;
+}
