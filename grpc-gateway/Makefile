@@ -1,4 +1,4 @@
-GO_OUT := server/proto
+GO_OUT := .
 
 .PHONY: go go-grpc-gateway
 
