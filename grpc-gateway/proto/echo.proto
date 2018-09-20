@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package echo;
+
+// to check well-known types
+import "google/protobuf/timestamp.proto";
+
+service EchoService {
+  rpc Echo(EchoPayload) returns (EchoPayload) {}
+}
+
+message EchoPayload {
+  string message = 1;
+  SubField sub_field = 2;
+}
+
+message SubField {
+  google.protobuf.Timestamp time = 1;
+}
